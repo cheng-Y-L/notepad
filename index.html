@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>小黑记事本</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!--&lt;!&ndash;小黑记事本 新增 &ndash;&gt;-->
+<!--&lt;!&ndash;2.html结构&ndash;&gt;-->
+<!--&lt;!&ndash;主体区域&ndash;&gt;-->
+<!--<div class="container">-->
+  <!--<section id="todoapp">-->
+    <!--&lt;!&ndash;输入框&ndash;&gt;-->
+    <!--<header class="header">-->
+      <!--<h1>小黑记事本</h1>-->
+      <!--<input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo">-->
+    <!--</header>-->
+    <!--&lt;!&ndash;列表区域&ndash;&gt;-->
+    <!--<section class="main">-->
+      <!--<ul class="todo-list">-->
+        <!--<li class="todo" v-for="(item,index) in list">-->
+          <!--<div class="view">-->
+            <!--<span class="index">{{ index + 1 }}.</span>-->
+            <!--<label>{{ item }}</label>-->
+            <!--<button class="destory"></button>-->
+          <!--</div>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</section>-->
+    <!--&lt;!&ndash;统计和清空&ndash;&gt;-->
+    <!--<footer class="footer">-->
+      <!--....-->
+    <!--</footer>-->
+  <!--</section>-->
+  <!--&lt;!&ndash;底部&ndash;&gt;-->
+  <!--<footer class="info">-->
+    <!--....-->
+  <!--</footer>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; 1 开发环境版本，包含了有帮助的命令行警告 &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+
+<!--<script>-->
+  <!--//  3.创建vue示例-->
+  <!--var app = new Vue({-->
+    <!--el: '#todoapp',-->
+    <!--data: {-->
+      <!--list: ['写代码', '吃饭饭', '睡觉觉'],-->
+      <!--inputValue: "好好学习,天天向上"-->
+    <!--},-->
+
+    <!--methods: {-->
+      <!--add: function(){-->
+        <!--this.list.push(this.inputValue)-->
+      <!--}-->
+
+  <!--}-->
+
+  <!--})-->
+
+
+<!--</script>-->
+
+
+
+<!--&lt;!&ndash;小黑记事本 删减 &ndash;&gt;-->
+<!--&lt;!&ndash;2.html结构&ndash;&gt;-->
+<!--&lt;!&ndash;主体区域&ndash;&gt;-->
+<!--<div class="container">-->
+  <!--<section id="todoapp">-->
+    <!--&lt;!&ndash;输入框&ndash;&gt;-->
+    <!--<header class="header">-->
+      <!--<h1>小黑记事本</h1>-->
+      <!--<input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo">-->
+    <!--</header>-->
+    <!--&lt;!&ndash;列表区域&ndash;&gt;-->
+    <!--<section class="main">-->
+      <!--<ul class="todo-list">-->
+        <!--<li class="todo" v-for="(item,index) in list">-->
+          <!--<div class="view">-->
+            <!--<span class="index">{{ index + 1 }}.</span>-->
+            <!--<label>{{ item }}</label>-->
+            <!--<button class="destory" @click="remove(index)">+</button>-->
+          <!--</div>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</section>-->
+    <!--&lt;!&ndash;统计和清空&ndash;&gt;-->
+    <!--<footer class="footer">-->
+      <!--....-->
+    <!--</footer>-->
+  <!--</section>-->
+  <!--&lt;!&ndash;底部&ndash;&gt;-->
+  <!--<footer class="info">-->
+    <!--....-->
+  <!--</footer>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; 1 开发环境版本，包含了有帮助的命令行警告 &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+
+<!--<script>-->
+  <!--//  3.创建vue示例-->
+  <!--var app = new Vue({-->
+    <!--el: '#todoapp',-->
+    <!--data: {-->
+      <!--list:['写代码', '吃饭饭', '睡觉觉'],-->
+      <!--inputValue: "好好学习,天天向上"-->
+    <!--},-->
+
+    <!--methods: {-->
+      <!--add: function(){-->
+        <!--this.list.push(this.inputValue)-->
+      <!--},-->
+      <!--remove:function (index) {-->
+<!--//        console.log('删除')-->
+<!--//        console.log(index)-->
+        <!--this.list.splice(index,1)-->
+
+      <!--}-->
+
+    <!--}-->
+
+  <!--})-->
+
+
+<!--</script>-->
+
+
+
+<!--&lt;!&ndash;小黑记事本 统计 &ndash;&gt;-->
+<!--&lt;!&ndash;2.html结构&ndash;&gt;-->
+<!--&lt;!&ndash;主体区域&ndash;&gt;-->
+<!--<div class="container">-->
+  <!--<section id="todoapp">-->
+    <!--&lt;!&ndash;输入框&ndash;&gt;-->
+    <!--<header class="header">-->
+      <!--<h1>小黑记事本</h1>-->
+      <!--<input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo">-->
+    <!--</header>-->
+    <!--&lt;!&ndash;列表区域&ndash;&gt;-->
+    <!--<section class="main">-->
+      <!--<ul class="todo-list">-->
+        <!--<li class="todo" v-for="(item,index) in list">-->
+          <!--<div class="view">-->
+            <!--<span class="index">{{ index + 1 }}.</span>-->
+            <!--<label>{{ item }}</label>-->
+            <!--<button class="destory" @click="remove(index)">+</button>-->
+          <!--</div>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</section>-->
+    <!--&lt;!&ndash;统计和清空&ndash;&gt;-->
+    <!--<footer class="footer">-->
+      <!--<span class="todo-count">-->
+        <!--<strong>{{ list.length }}</strong>-->
+        <!--item left-->
+      <!--</span>-->
+      <!--<button class="clear-completed">-->
+        <!--Clear-->
+      <!--</button>-->
+    <!--</footer>-->
+  <!--</section>-->
+  <!--&lt;!&ndash;底部&ndash;&gt;-->
+  <!--<footer class="info">-->
+    <!--....-->
+  <!--</footer>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; 1 开发环境版本，包含了有帮助的命令行警告 &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+
+<!--<script>-->
+  <!--//  3.创建vue示例-->
+  <!--var app = new Vue({-->
+    <!--el: '#todoapp',-->
+    <!--data: {-->
+      <!--list:['写代码', '吃饭饭', '睡觉觉'],-->
+      <!--inputValue: "好好学习,天天向上"-->
+    <!--},-->
+
+    <!--methods: {-->
+      <!--add: function(){-->
+        <!--this.list.push(this.inputValue)-->
+      <!--},-->
+      <!--remove:function (index) {-->
+<!--//        console.log('删除')-->
+<!--//        console.log(index)-->
+        <!--this.list.splice(index,1)-->
+
+      <!--}-->
+
+    <!--}-->
+
+  <!--})-->
+
+
+<!--</script>-->
+
+
+<!--小黑记事本 清空 隐藏 -->
+<!--2.html结构-->
+<!--主体区域-->
+<div class="container">
+  <section id="todoapp">
+    <!--输入框-->
+    <header class="header">
+      <h1>小黑记事本</h1>
+      <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo">
+    </header>
+    <!--列表区域-->
+    <section class="main">
+      <ul class="todo-list">
+        <li class="todo" v-for="(item,index) in list">
+          <div class="view">
+            <span class="index">{{ index + 1 }}.</span>
+            <label>{{ item }}</label>
+            <button class="destory" @click="remove(index)">+</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!--统计和清空-->
+    <footer class="footer">
+      <span class="todo-count" v-if="list.length!=0">
+        <strong>{{ list.length }}</strong>
+        item left
+      </span>
+      <button v-show="list.length!=0" class="clear-completed" @click="clear">
+        Clear
+      </button>
+    </footer>
+  </section>
+  <!--底部-->
+  <footer class="info">
+
+  </footer>
+</div>
+
+<!-- 1 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+  //  3.创建vue示例
+  var app = new Vue({
+    el: '#todoapp',
+    data: {
+      list:['写代码', '吃饭饭', '睡觉觉'],
+      inputValue: "好好学习,天天向上"
+    },
+
+    methods: {
+      add: function(){
+        this.list.push(this.inputValue)
+      },
+      remove:function (index) {
+//        console.log('删除')
+//        console.log(index)
+        this.list.splice(index,1)
+
+      },
+      clear: function(){
+        this.list=[]
+      }
+
+    }
+
+  })
+
+
+</script>
+
+
+
+</body>
+</html>

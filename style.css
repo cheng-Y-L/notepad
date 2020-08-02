@@ -1,0 +1,88 @@
+/*整体定位*/
+body {
+    position: relative;
+}
+
+.container {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, 0);
+}
+
+ul, li, body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*设计部分*/
+.header h1 {
+    font-size: 40px;
+    color: orange;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header input {
+    width: 266px;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+
+.todo {
+    list-style-type: none;
+
+}
+
+.todolist {
+    display: block;
+}
+
+.view {
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid white;
+    position: relative;
+}
+
+.index {
+    display: block;
+    margin-right: 10px;
+}
+
+.view label {
+    display: block;
+    margin-right: 100px;
+}
+
+.view:hover {
+    border: 1px solid orange;
+}
+
+.destory {
+    font-size: 20px;
+    transform: rotate(45deg);
+    background-color: white;
+    border: none;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    right:5%;
+
+}
+
+.view:hover .destory {
+    visibility: visible;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
